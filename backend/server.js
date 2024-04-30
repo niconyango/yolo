@@ -43,7 +43,7 @@ app.use(cors());
 // Use Route
 app.use('/api/products', productRoute);
 app.get('/', (req, res) => {
-    res.send('<h1>Back end server</h1>');
+    res.send('<h3>Backend server</h3>');
 });
 
 

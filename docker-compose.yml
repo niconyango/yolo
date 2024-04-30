@@ -1,27 +1,31 @@
-version: '3'
-
+---
+version: '3.8'
 services:
-  mongodb:
-    image: mongo
+  database:
+    image: mongo:latest
     container_name: mongodb
     ports:
       - "27017:27017"
     volumes:
-      - mongodb_data:/data/db
+      - yolo:/data/db
     networks:
       - yolo-network
 
   backend:
+    build: ./backend
     image: backend-image
     container_name: backend
     ports:
       - "5000:5000"
+    enviroment: 
+      DB_URL: mongodb://database/
     depends_on:
       - mongodb
     networks:
       - yolo-network
 
   frontend:
+    build: ./client
     image: frontend-image
     container_name: frontend
     ports:
@@ -33,4 +37,4 @@ networks:
   yolo-network:
 
 volumes:
-  mongodb_data:
+  yolo:
