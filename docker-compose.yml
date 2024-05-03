@@ -1,7 +1,7 @@
 #version: '3.9'
 services:
   database:
-    image: mongo:latest
+    image: mongo
     container_name: mongodb
     ports:
       - "27017:27017"
@@ -34,6 +34,7 @@ services:
 
 networks:
   yolo-network:
+    name: yolo-network
     driver: bridge
 
 volumes:
