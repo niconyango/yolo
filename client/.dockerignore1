@@ -3,7 +3,6 @@
 node_modules
 Dockerfile*
 .gitignore
-.DS_Store
 #misc
 .env.local
 .env.development.local

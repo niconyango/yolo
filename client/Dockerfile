@@ -1,15 +1,25 @@
-# Use the official Node.js image as the base image
-FROM node:alpine3.18 
+# STAGE 1
+FROM node:alpine as build
 
-# Set the working directory in the container
-WORKDIR /
+WORKDIR /code
 # Copy package.json and package-lock.json files
-COPY package*.json ./
-# Install dependencies
-RUN npm install
-# Copy the rest of the application code
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+
+RUN npm install --production
+# COPY all the files from Current Directory into the Container
 COPY . .
+
+# Install the Project Dependencies like Express Framework
+RUN npm run build
+
+# STAGE 2
+FROM nginx:1.22-alpine as prod
+
+COPY --from=build /code/build /usr/share/nginx/html
+
+# Tell that this image is going to Open a Port 
 EXPOSE 3000
 
-# Command to run the Node.js application
-CMD ["npm", "start"]
+# Default Command to launch the Application
+CMD ["nginx", "-g", "daemon off;"]

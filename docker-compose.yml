@@ -28,7 +28,7 @@ services:
     #image: frontend-image
     container_name: frontend
     ports:
-      - "3000:3000"
+      - "3000:80"
     networks:
       - yolo-network
 
