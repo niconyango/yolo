@@ -1,7 +1,8 @@
 # STAGE 1
 FROM node:alpine as build
-
+#Changing working directory
 WORKDIR /code
+
 # Copy package.json and package-lock.json files
 COPY package.json package.json
 COPY package-lock.json package-lock.json
