@@ -7,7 +7,12 @@ const upload = multer();
 const productRoute = require('./routes/api/productRoute');
 
 // Connecting to the Database
-let mongodb_url = 'mongodb+srv://niconyango:Fa1c0n1@nocluster.mtqlrqb.mongodb.net/';
+/** Connecting directly to MongoDB Atlas */
+// let mongodb_url = 'mongodb+srv://niconyango:Fa1c0n1@nocluster.mtqlrqb.mongodb.net/';
+// let dbName = 'nocluster';
+
+/**  Connecting to mongodb container database*/
+let mongodb_url = 'mongodb://mongodb:27017/';
 let dbName = 'nocluster';
 
 // define a url to connect to the database

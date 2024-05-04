@@ -10,7 +10,6 @@ To ensure I end up with a minified version of the images, I applied the followin
 2. Use of alpine-based images: alpine Linux fronted as being lightweight and security focused, helped in ensuring
    that the final images are reduced to size significantly.
 3. .dockerignore: this helped in ensuring unnecessary directories and files are not copied to the final image.
-4. Opting for MongoDB Atlas for the final runing of the services.
 
 # Image Versioning
 
@@ -20,5 +19,4 @@ To ensure I end up with a minified version of the images, I applied the followin
 
 # Persistence of the added products
 
-There being more than one option to achieve this, I opted for MongoDB Atlas which appeared to be more solid.
-The volume was also another option and made avaible only that the block is commented out.
+There being more than one option to achieve this, I managed to set up both the volume and MongoDB Atlas in efforts to make sure that either works.
