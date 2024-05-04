@@ -14,10 +14,17 @@ To ensure I end up with a minified version of the images, I applied the followin
 # Image Versioning
 
 ![alt text](<Screenshot from 2024-05-04 22-23-32.png>)
+![alt text](<Screenshot from 2024-05-05 00-33-39.png>)
 
 # Image Deployment
 
+I built two images: frontend and backend which are deployed.
+![alt text](<Screenshot from 2024-05-05 00-32-00.png>)
+
 # Service Orchestration
+
+The service is deployable by just running the docker-compose file included in the root folder as it has all the requirements for deployment.
+![alt text](<Screenshot from 2024-05-05 00-36-47.png>)
 
 # Persistence of the added products
 
