@@ -13,6 +13,8 @@ To ensure I end up with a minified version of the images, I applied the followin
 
 # Image Versioning
 
+![alt text](<Screenshot from 2024-05-04 22-23-32.png>)
+
 # Image Deployment
 
 # Service Orchestration
