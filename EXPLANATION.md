@@ -10,6 +10,8 @@ To ensure I end up with a minified version of the images, I applied the followin
 2. Use of alpine-based images: alpine Linux, fronted as being lightweight and security focused, helped in ensuring that the final images are as small as possible.
 3. .dockerignore: this helped in ensuring unnecessary directories/files are not copied to the final image.
 
+The above enable me to achieve `227.1 MB` in total for all the images i.e backend: `184 MB` and frontend `43.1 MB`.
+
 # Image Versioning
 
 Being that they were first images, I settled on v1.0.0 as the tag version.
