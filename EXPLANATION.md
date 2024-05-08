@@ -12,10 +12,13 @@ To ensure I end up with a minified version of the images, I applied the followin
 
 The above enable me to achieve `227.1 MB` in total for all the images i.e backend: `184 MB` and frontend `43.1 MB`.
 
+![alt text](<Screenshot from 2024-05-08 20-00-21.png>)
+
 # Image Versioning
 
 Being that they were first images, I settled on v1.0.0 as the tag version.
-![alt text](<Screenshot from 2024-05-05 00-33-39.png>)
+
+![alt text](<Screenshot from 2024-05-08 20-00-21-1.png>)
 
 # Image Deployment
 

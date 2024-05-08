@@ -13,7 +13,7 @@ services:
   backend:
     build: ./backend   
     container_name: backend
-    image: backend:v1.0.0
+    image: niconyango/backend:v1.0.0
     ports:
       - "5000:5000"
     environment: 
@@ -27,7 +27,7 @@ services:
   frontend:
     build: ./client   
     container_name: frontend
-    image: frontend:v1.0.0
+    image: niconyango/frontend:v1.0.0
     ports:
       - "3000:80"
     networks:
