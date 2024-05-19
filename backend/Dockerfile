@@ -10,7 +10,7 @@ COPY package*.json ./
 RUN npm install
 # Copy the rest of the application code
 COPY . .
-# Access port
+# Access portvan
 EXPOSE 5000
 
 # Command to run the Node.js application
