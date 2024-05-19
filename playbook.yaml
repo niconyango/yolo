@@ -1,3 +1,9 @@
 - hosts: all
   become: true
+  vars: containers:3
+    container
   roles:
+    - test-connect
+    - update-server
+    - install-dependencies
+    - install-docker
