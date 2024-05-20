@@ -1,6 +1,13 @@
 ---
 # tasks file for deploy-containers
+- name: Install pip dependencies
+  ansible.builtin.pip:
+    name:
+      - docker<7
+      - docker-compose
 - name: Deploy Containers
   docker_compose:
     project_src: /home/vagrant/DevOps05/yolo/
-     command: docker compose -f docker-compose.yml up -d
+    files:
+      - "/home/vagrant/DevOps05/yolo/docker-compose.yml"
+    state: present
