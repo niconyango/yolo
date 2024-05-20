@@ -1,0 +1,6 @@
+---
+# tasks file for deploy-containers
+- name: Deploy Containers
+  docker_compose:
+    project_src: /home/vagrant/DevOps05/yolo/
+     command: docker compose -f docker-compose.yml up -d
