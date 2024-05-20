@@ -11,3 +11,4 @@
     - install-docker
     - install-git
     - clone-repo
+    - deploy-containers
