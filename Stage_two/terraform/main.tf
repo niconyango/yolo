@@ -9,7 +9,7 @@ resource "vagrant" "server" {
   memory = 1024
   cpus   = 2
   provisioner "shell" {
-    inline = ["ansible-playbook /vagrant/ansible/stagetwo_playbook.yml"]
+    inline = ["ansible-playbook /vagrant/ansible/playbook.yml"]
   }
 }
 
