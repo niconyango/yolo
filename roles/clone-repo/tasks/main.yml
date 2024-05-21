@@ -4,3 +4,4 @@
   git:
     repo: https://github.com/niconyango/yolo.git
     dest: "/home/{{ USER }}/{{ WORK_AREA }}/{{ PROJECT_NAME }}"
+    version: master

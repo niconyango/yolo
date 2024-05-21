@@ -5,6 +5,7 @@
     name:
       - docker<7
       - docker-compose
+      
 - name: Deploy Containers
   docker_compose:
     project_src: /home/vagrant/DevOps05/yolo/
