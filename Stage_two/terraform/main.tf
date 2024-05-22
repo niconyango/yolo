@@ -1,5 +1,10 @@
-provider "virtualbox" {
-  # Configure the VirtualBox provider
+terraform {
+  required_providers {
+    vagrant = {
+      source  = "hashicorp/vagrant"
+      version = ">= 0.1.0"
+    }
+  }
 }
 
 resource "vagrant" "server" {
