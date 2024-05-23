@@ -1,0 +1,7 @@
+---
+# tasks file for clone-repo
+- name: Clone Remote Git Repository
+  git:
+    repo: https://github.com/niconyango/yolo.git
+    dest: "/home/{{ USER }}/{{ WORK_AREA }}/{{ PROJECT_NAME }}"
+    version: Stage_two

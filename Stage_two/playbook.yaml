@@ -1,0 +1,14 @@
+- hosts: all
+  become: true
+  vars:
+    USER: vagrant
+    WORK_AREA: DevOps05
+    PROJECT_NAME: yolo
+  roles:
+    - test-connect
+    - update-server
+    - install-dependencies
+    - install-docker
+    - install-git
+    - clone-repo
+    - deploy-containers
