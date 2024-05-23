@@ -8,6 +8,7 @@
 
 - name: Deploy Containers
   docker_compose:
+  become: true
     project_src: /home/vagrant/DevOps05/yolo/
     files:
       - "/home/vagrant/DevOps05/yolo/docker-compose.yml"
