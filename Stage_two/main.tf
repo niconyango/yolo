@@ -22,15 +22,15 @@ resource "null_resource" "vagrant_up" {
 }
 resource "null_resource" "run_ansible_playbook" {
   provisioner "remote-exec" {
-    inline = [
-      "ansible-playbook -i /home/ubuntu/Moringa/projects/yolo/Stage_two/playbook.yaml"
-    ]
     connection {
       type        = "ssh"
       user        = "ubuntu"
       private_key = file("~/.ssh/id_rsa")
       host        = "127.0.0.1"
     }
+    inline = [
+      "ansible-playbook -i /home/ubuntu/Moringa/projects/yolo/Stage_two/playbook.yaml"
+    ]
   }
   triggers = {
     always_run = "${timestamp()}"

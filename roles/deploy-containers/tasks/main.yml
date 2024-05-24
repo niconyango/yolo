@@ -5,9 +5,9 @@
     name:
       - docker<7
       - docker-compose
-      
+
 - name: Deploy Containers
-  docker_compose:
+  community.docker.docker_compose_v2:
     project_src: /home/vagrant/DevOps05/yolo/
     files:
       - "/home/vagrant/DevOps05/yolo/docker-compose.yml"
