@@ -23,7 +23,7 @@ resource "null_resource" "vagrant_up" {
 resource "null_resource" "run_ansible_playbook" {
   provisioner "remote-exec" {
     inline = [
-      "ansible-playbook  /home/ubuntu/Moringa/projects/yolo/Stage_two/playbook.yaml"
+      "ansible-playbook -i /home/ubuntu/Moringa/projects/yolo/Stage_two/playbook.yaml"
     ]
     connection {
       type        = "ssh"
