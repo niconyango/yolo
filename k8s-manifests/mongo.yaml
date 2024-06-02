@@ -1,22 +1,35 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
-  name: mongo
+  name: mongo-stateful
 spec:
   selector:
     matchLabels:
-      app: mongo
+      app: mongo-stateful
+  serviceName: mongo-service
+  replicas: 2
   template:
     metadata:
       labels:
-        app: mongo
+        app: myapp
     spec:
+      volumes:
+      - name: mongo-volume
+        persistentVolumeClaim:
+          claimName: mongo-pvc
       containers:
-      - name: mongodb
-        image: mongo
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+      - name: mongo
+        image: mongo:latest
         ports:
         - containerPort: 27017
+        volumeMounts:
+        - name: yolo-ip4
+          mountPath: /data/db
+  volumeClaimTemplates:
+  - metadata:
+      name: mongo-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
