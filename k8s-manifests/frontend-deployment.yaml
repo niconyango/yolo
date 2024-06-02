@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: niconyango/frontend:v1.0.0
+        tty: true
+        stdin: true 
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
+        ports:
+        - containerPort: 80
