@@ -16,9 +16,9 @@ spec:
         image: niconyango/frontend:v1.0.0
         tty: true
         stdin: true 
-        # resources:
-        #   limits:
-        #     memory: "128Mi"
-        #     cpu: "500m"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 80
