@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: frontend-deployment
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: frontend
@@ -15,9 +14,11 @@ spec:
       containers:
       - name: frontend
         image: niconyango/frontend:v1.0.0
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        tty: true
+        stdin: true 
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
         ports:
         - containerPort: 80

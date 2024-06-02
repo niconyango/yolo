@@ -1,13 +1,14 @@
+# PersistentVolumeClaim manifest
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mongo-pvc
 spec:
-  resources:
-    requests:
-      storage: 1G
-  volumeMode: Filesystem
-  storageClassName: standard
   accessModes:
     - ReadWriteOnce
-  volumeName: mongo-pv
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: custom-standard
+  
+  
