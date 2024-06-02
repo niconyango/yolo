@@ -4,12 +4,12 @@ metadata:
   name: mongo-pv
 spec:
   capacity:
-    storage: 1Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteOnce
 
   storageClassName: custom-standard
   gcePersistentDisk:
-    pdName: mongo-pv
+    pdName: mongo-disk
     fsType: ext4
   persistentVolumeReclaimPolicy: Retain
