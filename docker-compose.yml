@@ -11,21 +11,21 @@ services:
       - yolo-network
 
   backend:
-    build: ./backend   
+    build: ./backend
     container_name: backend
     image: niconyango/backend:v1.0.0
     ports:
       - "5000:5000"
-    environment: 
+    environment:
       # DB_URL: mongodb://database/
-      DB_URL: mongodb://mongodb:27017/   
+      DB_URL: mongodb://mongodb:27017/
     depends_on:
       - database
     networks:
       - yolo-network
 
   frontend:
-    build: ./client   
+    build: ./client
     container_name: frontend
     image: niconyango/frontend:v1.0.0
     ports:
@@ -40,4 +40,4 @@ networks:
 
 volumes:
   yolo:
-   name: yolo
+    name: yolo

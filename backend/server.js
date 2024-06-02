@@ -52,7 +52,6 @@ app.get('/', (req, res) => {
     res.send('<h3>Backend server</h3>');
 });
 
-
 // Define the PORT
 const PORT = process.env.PORT || 5000
 
