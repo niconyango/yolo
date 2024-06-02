@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: myapp
+        app: mongo-stateful
     spec:
       volumes:
       - name: mongo-volume
