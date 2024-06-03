@@ -19,11 +19,11 @@ spec:
         ports:
         - containerPort: 27017
         volumeMounts:
-        - name: mongo-pvc
+        - name: yolo
           mountPath: /data/db
   volumeClaimTemplates:
   - metadata:
-      name: mongo-pvc
+      name: yolo
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
