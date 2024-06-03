@@ -21,4 +21,4 @@ With the environment set and requirements met, below commands helps achieve the 
 - `kubectl apply -f frontend-deployment.yaml`
 - `kubectl apply -f frontend-service.yaml`
 
-[The deployment is available here](http://34.173.140.200:3000/).
+[The deployment is available here](http://34.69.86.68:3000/).
